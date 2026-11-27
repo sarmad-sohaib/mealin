@@ -12,7 +12,7 @@ Pick work from `docs/tasks/README.md`.
 
 ## In progress
 
-- [004 Swift interop spike](004-swift-interop-spike.md) — Depends: none
+None.
 
 ## Blocked
 
@@ -56,4 +56,5 @@ Pick work from `docs/tasks/README.md`.
 ## Done
 
 - [003 Move Compose into androidApp](003-move-compose-into-android-app.md) — Depends: none
+- [004 Swift interop spike](004-swift-interop-spike.md) — Depends: none
 

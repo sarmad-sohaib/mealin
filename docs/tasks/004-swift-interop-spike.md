@@ -1,6 +1,6 @@
 # 004 Swift interop spike
 
-Status: In progress
+Status: Done
 
 Depends: none
 
