@@ -14,7 +14,7 @@ Read `docs/decisions/INDEX.md` before changing the architecture. The decision fi
 
 ```
 ./gradlew :androidApp:assembleDebug
-./gradlew :sharedUI:testAndroidHostTest :sharedLogic:testAndroidHostTest
+./gradlew :androidApp:testDebugUnitTest :sharedLogic:testAndroidHostTest
 ./gradlew :sharedLogic:iosSimulatorArm64Test
 ```
 
