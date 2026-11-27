@@ -6,7 +6,6 @@ Pick work from `docs/tasks/README.md`.
 
 ## Ready
 
-- [003 Move Compose into androidApp](003-move-compose-into-android-app.md) — Depends: none
 - [004 Swift interop spike](004-swift-interop-spike.md) — Depends: none
 - [005 GitHub Actions](005-github-actions.md) — Depends: none
 - [006 Architecture fitness tests](006-architecture-fitness.md) — Depends: none
@@ -14,7 +13,7 @@ Pick work from `docs/tasks/README.md`.
 
 ## In progress
 
-None.
+- [003 Move Compose into androidApp](003-move-compose-into-android-app.md) — Depends: none
 
 ## Blocked
 
