@@ -6,12 +6,12 @@ Pick work from `docs/tasks/README.md`.
 
 ## Ready
 
-- [006 Architecture fitness tests](006-architecture-fitness.md) — Depends: none
 - [007 Catalog export](007-catalog-export.md) — Depends: none
 
 ## In progress
 
 - [005 GitHub Actions](005-github-actions.md) — Depends: none
+- [006 Architecture fitness tests](006-architecture-fitness.md) — Depends: none
 
 ## Blocked
 
