@@ -1,6 +1,6 @@
 # 006 Architecture fitness tests
 
-Status: In progress
+Status: Done
 
 Depends: none
 

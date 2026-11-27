@@ -1,6 +1,6 @@
 # 005 GitHub Actions
 
-Status: In progress
+Status: Done
 
 Depends: none
 

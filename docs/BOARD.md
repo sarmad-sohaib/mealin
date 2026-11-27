@@ -7,17 +7,16 @@ Pick work from `docs/tasks/README.md`.
 ## Ready
 
 - [007 Catalog export](007-catalog-export.md) — Depends: none
+- [010 Nutrition, BMI, units, and dates](010-nutrition-math.md) — Depends: 006
 
 ## In progress
 
-- [005 GitHub Actions](005-github-actions.md) — Depends: none
-- [006 Architecture fitness tests](006-architecture-fitness.md) — Depends: none
+None.
 
 ## Blocked
 
 - [008 SQLDelight databases](008-sqldelight-databases.md) — Depends: 006, 007
 - [009 Copy the catalog once](009-copy-catalog-once.md) — Depends: 007, 008
-- [010 Nutrition, BMI, units, and dates](010-nutrition-math.md) — Depends: 006
 - [011 Calorie budget](011-calorie-budget.md) — Depends: 010
 - [012 Activity calories](012-activity-calories.md) — Depends: 010
 - [013 Platform seams](013-platform-seams.md) — Depends: 003, 006, 008
@@ -56,4 +55,6 @@ Pick work from `docs/tasks/README.md`.
 
 - [003 Move Compose into androidApp](003-move-compose-into-android-app.md) — Depends: none
 - [004 Swift interop spike](004-swift-interop-spike.md) — Depends: none
+- [005 GitHub Actions](005-github-actions.md) — Depends: none
+- [006 Architecture fitness tests](006-architecture-fitness.md) — Depends: none
 

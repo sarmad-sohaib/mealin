@@ -1,6 +1,6 @@
 # 010 Nutrition, BMI, units, and dates
 
-Status: Blocked
+Status: Ready
 
 Depends: 006
 
