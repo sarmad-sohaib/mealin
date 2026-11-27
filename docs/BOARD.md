@@ -6,12 +6,11 @@ Pick work from `docs/tasks/README.md`.
 
 ## Ready
 
-- [007 Catalog export](007-catalog-export.md) — Depends: none
 - [010 Nutrition, BMI, units, and dates](010-nutrition-math.md) — Depends: 006
 
 ## In progress
 
-None.
+- [007 Catalog export](007-catalog-export.md) — Depends: none
 
 ## Blocked
 

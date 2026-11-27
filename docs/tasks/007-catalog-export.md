@@ -1,6 +1,6 @@
 # 007 Catalog export
 
-Status: Ready
+Status: In progress
 
 Depends: none
 
