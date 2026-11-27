@@ -13,7 +13,7 @@ Pick work from `docs/tasks/README.md`.
 
 ## In progress
 
-- [003 Move Compose into androidApp](003-move-compose-into-android-app.md) — Depends: none
+None.
 
 ## Blocked
 
@@ -56,5 +56,5 @@ Pick work from `docs/tasks/README.md`.
 
 ## Done
 
-None.
+- [003 Move Compose into androidApp](003-move-compose-into-android-app.md) — Depends: none
 
