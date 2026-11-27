@@ -29,5 +29,7 @@ Newest date first. Files that share a date are listed alphabetically by filename
 
 - 2026-11-27 [Strings stay in the Android and iOS resource files](2026-11-27-strings-stay-in-the-apps.md): User-visible copy lives in Android resources and in iOS `Localizable.strings`. Shared code returns state and error codes. It does not return English sentences for the UI to display.
 
+- 2026-11-27 [One task goes through a pull request, then a binary is uploaded only when an app changed](2026-11-27-team-loop.md): "Let's go" runs the lowest Ready task through a branch, a failing test commit, the implementation, and a pull request. The author asks the user for a missing fact or credential, including a Firebase JSON, and waits. The author does not invent it. The user starts a new chat and says "let's go" to review and merge after checks are green. After that merge, an `androidApp` or `iosApp` change is uploaded to Firebase App Distribution and TestFlight when `docs/distribution/REQUIRED.md` has values. The session does not start the next task. The app does not gain the Firebase SDK.
+
 - 2026-11-27 [Business rules are tested once](2026-11-27-test-strategy.md): Business rules are tested once in sharedLogic commonTest, and those tests also run as iosSimulatorArm64Test. UI tests only check that a screen shows state and sends intents.
 

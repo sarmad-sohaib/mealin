@@ -16,6 +16,10 @@ A different session from the one that implemented the task reviews the diff. The
 - Versions were added only in `gradle/libs.versions.toml`.
 - A new user-database table is the migration this task owns, and no other migration task was In progress.
 - The Gradle or Xcode command in the task's Done when is green.
+- The diff contains only what that command required. Extra features, helpers, and dependencies fail the review.
+- GitHub checks are green. Before task 005 is on `master`, the local command stands in, and the PR says so.
+- Distribution used real values from `docs/distribution/REQUIRED.md`, or it was skipped because the apps did not change or a name had no value. An invented app id, team id, or Firebase SDK fails the review.
+- The author did not approve their own pull request.
 - The task file's Status is Done, and `scripts/regenerate-board.sh` was run.
 
 ## Fail the review

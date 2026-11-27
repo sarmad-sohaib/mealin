@@ -1,6 +1,8 @@
 # How an agent picks a task
 
-Read `AGENTS.md`, `docs/PLAN.md`, and `docs/REVIEW.md` first. Then open `docs/BOARD.md`.
+Read `AGENTS.md`, `docs/PLAN.md`, `docs/REVIEW.md`, and `docs/WORKFLOW.md` first. Then open `docs/BOARD.md`.
+
+"Let's go" means `docs/WORKFLOW.md`. Do only the Done when list. Do not invent facts or credentials.
 
 ## Pick
 
@@ -55,4 +57,4 @@ Before code that changes schema, modules, a shared API, a bundled file, or test 
 
 ## Done
 
-Run the command in the task. Set Status to Done only after that command is green and a review session has accepted the diff. Regenerate the board.
+Run the command in the task. Open the pull request. A different session reviews it. Set Status to Done only after that review and after the GitHub checks are green, or after the local command is green when task 005 is not on `master` yet. Regenerate the board. Distribute only as `docs/WORKFLOW.md` says. Do not start the next task.
