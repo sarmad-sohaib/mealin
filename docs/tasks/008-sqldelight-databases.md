@@ -1,6 +1,6 @@
 # 008 SQLDelight databases
 
-Status: Blocked
+Status: Ready
 
 Depends: 006, 007
 
