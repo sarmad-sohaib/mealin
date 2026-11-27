@@ -10,9 +10,9 @@ Take the lowest-numbered task whose Status is Ready, whose Depends are all Done,
 
 `023` sorts before `023a`. Compare the number, then the letter suffix. `003` is lower than `004`. `023a` is lower than `023b`.
 
-One agent, one task file. Start a new session for that task. Do not pick a second task in the same session.
+"Let's go" selects a chunk, as `docs/WORKFLOW.md` describes. A subagent gets one task file and does not take a second. The coordinator does not edit that subagent's Owns paths.
 
-A different session reviews the result, using `docs/REVIEW.md`. The reviewer does not implement the next task.
+A different session reviews the open pull requests, using `docs/REVIEW.md`. The reviewer does not implement the next task.
 
 ## What this session may edit
 

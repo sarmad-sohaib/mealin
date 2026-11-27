@@ -6,7 +6,7 @@ Shared rules live in `:sharedLogic`. iOS UI is SwiftUI in `iosApp` and calls Sha
 
 The execution plan is `docs/PLAN.md`. Pick the next task from `docs/tasks/README.md` and `docs/BOARD.md`.
 
-When the user says "let's go", follow `docs/WORKFLOW.md`. One Ready task, from the failing test through the pull request. Then stop. Ask the user for anything only they can supply, including a missing Firebase JSON, and wait. Do not invent it. The user starts a new chat and says "let's go" again to review and merge. After merge, upload to Firebase App Distribution and TestFlight only if that task changed `androidApp/` or `iosApp/` and the names in `docs/distribution/REQUIRED.md` have values. Do not add the Firebase SDK.
+When the user says "let's go", follow `docs/WORKFLOW.md`. If pull requests are waiting, review that set. Otherwise take the Ready tasks that can run together, one subagent each, or one task when a chunk is not useful. Ask the user for anything only they can supply, including a missing Firebase JSON, and wait. Do not invent it. After merge, upload to Firebase App Distribution and TestFlight only if that task changed `androidApp/` or `iosApp/` and the names in `docs/distribution/REQUIRED.md` have values. Do not add the Firebase SDK.
 
 Read `docs/decisions/INDEX.md` before changing the architecture. The decision file is the record.
 

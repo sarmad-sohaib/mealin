@@ -1,14 +1,16 @@
 ---
-description: MealIn session loop. Let's go runs one board task through review and distribution.
+description: MealIn session loop. Let's go runs a chunk of board tasks, or reviews the open pull requests.
 alwaysApply: true
 ---
 
 # Let's go
 
-When the user says "let's go", follow `docs/WORKFLOW.md`. One Ready task, then stop.
+When the user says "let's go", follow `docs/WORKFLOW.md`.
 
-Do only what that task's Done when list requires. Use the smallest change. Do not invent a fact, a credential, a Firebase app, or an Apple team. If you need something from the user, ask and wait.
+If pull requests are open and this chat did not open them, review that set. One subagent per pull request. Merge in task-number order. Do not implement.
 
-Commit the failing test before the implementation. Open a pull request. Do not review or merge your own pull request. The user starts a new chat and says "let's go" for the review.
+If none are waiting, take every Ready task that can run together: Owns do not overlap, and at most one Lane C task. One subagent per task. A lone Ready task, a spike, or the catalog export is a single task. Do not continue into tasks that are still Blocked.
 
-After merge, upload to Firebase App Distribution and TestFlight only when `androidApp/` or `iosApp/` changed and every name in `docs/distribution/REQUIRED.md` already has a value. Do not add the Firebase SDK.
+Do only what each task's Done when list requires. Use the smallest change. Ask the user for a missing fact or credential and wait. Do not invent it.
+
+Each task gets its own branch and pull request. The failing test is committed first. Do not review your own pull request.

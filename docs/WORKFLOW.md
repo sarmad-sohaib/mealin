@@ -2,9 +2,9 @@
 
 The user says "let's go". That sentence is the whole assignment.
 
-If a pull request is open for an In progress task and this session did not open it, you are the reviewer. Follow "Review and merge" below. Do not implement.
+If any pull request is open for an In progress task and this session did not open it, you are the reviewer. Follow "Review and merge" below. Do not implement.
 
-If no pull request is waiting, do the next Ready task through the pull request, and through distribution when this task changes an installable app. Then stop. Do not start the next task. Do not review your own pull request.
+If no pull request is waiting, choose a chunk or a single task, as "The chunk" describes. Parallel tasks get one subagent each. A chain runs in order. Each task still has its own branch and pull request. Then stop. Do not review your own pull request.
 
 ## Do not invent
 
@@ -16,22 +16,39 @@ A secret, a GitHub remote, a Firebase service-account JSON, a Firebase app id, a
 
 A choice the task already settled is not a question. Follow it. A new choice inside the task gets a decision file, then the smallest implementation. Do not wait for the user on that choice.
 
-## One task
+## The chunk
 
-1. Read `AGENTS.md`, `docs/PLAN.md`, `docs/REVIEW.md`, and this file.
-2. On `docs/BOARD.md`, take the lowest-numbered Ready task whose Depends are Done and whose Owns paths do not overlap a task that is In progress.
-3. Branch from `master`: `task/NNN-slug`. If `origin` does not exist, ask the user for the remote. Do not create one.
-4. Set the task Status to In progress, commit that, and regenerate the board with `./scripts/regenerate-board.sh`.
-5. For a behavior change, commit the failing test first. Then commit the implementation. Do not squash.
-6. Run the command in the task's Done when. It must be green locally.
-7. Push the branch and open one pull request. The PR body lists the task file, the local command, and the result.
-8. Stop. A different session reviews with `docs/REVIEW.md`. The author does not approve and does not merge.
+Read `AGENTS.md`, `docs/PLAN.md`, `docs/REVIEW.md`, and this file. Then read `docs/BOARD.md`.
+
+A single task is the chunk when it is a spike, the catalog export, or it must stop to ask the user. Do that task and stop.
+
+A parallel chunk is every Ready task that can run together:
+
+- Depends are Done.
+- Owns paths do not overlap.
+- At most one Lane C task, the lowest-numbered one. Leave any other Lane C task for the next "let's go".
+
+Do not add a task that is still Blocked at the start. Write one sentence in this session's work log naming the tasks and why any Ready task was left out.
+
+When exactly one ordinary task is Ready, run it and then the tasks it unblocks, in order. That chain stops at three tasks, at a second Lane C task, or before a UI screen.
+
+Spawn one subagent per task in the chunk. The coordinator does not edit those Owns paths. A subagent does only its task file and its Owns. It does not spawn another agent. It does not open a second task.
+
+Each subagent:
+
+1. Branches from `master`: `task/NNN-slug`. If `origin` does not exist, ask the user for the remote. Do not create one.
+2. Sets the task Status to In progress and regenerates the board with `./scripts/regenerate-board.sh`.
+3. For a behavior change, commits the failing test first, then the implementation. Does not squash.
+4. Runs the command in the task's Done when. It must be green locally.
+5. Pushes the branch and opens one pull request. The body names the task file, the command, and the result.
+
+If the chunk is a chain rather than a parallel set, run it in dependency order. Start the next task only after the previous pull request is open. The chain stops at three tasks, at a second Lane C task, or before a UI screen. A UI screen is its own chunk, together with the other platform's screen for that same feature when that screen is also Ready.
 
 ## Review and merge
 
-The user opens a new chat and says "let's go". That chat did not write the pull request, so this session is the reviewer. It reads the open pull request and `docs/REVIEW.md`. It does not read the author's chat, does not change production code, and does not pick a Ready task.
+The user opens a new chat and says "let's go". That chat did not write the pull requests, so this session reviews every open one. One subagent per pull request. They do not read the author's chat, do not change production code, and do not pick a Ready task.
 
-If the checklist fails, comment on the pull request with the failed items and stop. The next "let's go" in a new chat returns to that same task and fixes only those items.
+Merge in ascending task number. Skip a pull request whose Depends are not Done on `master`. If the checklist fails, comment the failed items and do not merge that one. The next "let's go" fixes only those items.
 
 Merge only when the review checklist passes and the GitHub checks from task 005 are green. Before task 005 is on `master`, the local command in the task file is the check, and the PR says that CI is not on `master` yet.
 
