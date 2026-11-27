@@ -1,0 +1,3 @@
+sharedLogic/src/commonMain/kotlin/com/sarmad/mealin/Platform.kt
+sharedLogic/src/androidMain/kotlin/com/sarmad/mealin/Platform.android.kt
+sharedLogic/src/iosMain/kotlin/com/sarmad/mealin/Platform.ios.kt
