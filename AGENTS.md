@@ -2,7 +2,9 @@
 
 MealIn is a Kotlin Multiplatform app. The package is `com.sarmad.mealin`.
 
-Shared rules live in `:sharedLogic`. iOS UI is SwiftUI in `iosApp` and calls SharedLogic. Android Compose currently lives in `:sharedUI` because the wizard generated it that way. Do not move or delete `:sharedUI` in this setup. A later move is a module change, so it needs its own decision file first.
+Shared rules live in `:sharedLogic`. iOS UI is SwiftUI in `iosApp` and calls SharedLogic. Android Compose currently lives in `:sharedUI`. Task 003 moves it into `androidApp` and deletes `:sharedUI`, under `docs/decisions/2026-11-27-compose-lives-in-android-app.md`. No other task moves or deletes a module.
+
+The execution plan is `docs/PLAN.md`. Pick the next task from `docs/tasks/README.md` and `docs/BOARD.md`.
 
 Read `docs/decisions/INDEX.md` before changing the architecture. The decision file is the record.
 
